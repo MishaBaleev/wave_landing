@@ -1,0 +1,21 @@
+.mob{
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    .background{
+        position: fixed!important;
+    }
+    .mob_main{
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow-y: scroll;
+        &::-webkit-scrollbar{display: hidden;}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .mob_section{
+            margin-top: 20px;
+            scroll-margin: 100px;
+        }
+    }
+}

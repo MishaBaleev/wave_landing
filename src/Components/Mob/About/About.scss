@@ -1,0 +1,54 @@
+@import "../mixin.scss";
+
+.about_mob{
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    .title_mob{
+        background-color: #6F85B0;
+        width: max-content;
+        padding: 2px 15px;
+        border-radius: 10px 10px 0 0;
+        p{
+            margin: 0;
+            @include bText(20)
+        }
+    }
+    .block_mob{
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 5px 5px #00000035;
+        border-radius: 0 10px 10px 10px;
+        padding: 10px 0;
+        .logo{
+            width: 100%;
+            @include flexContainerCenterWrap();
+            img{
+                width: 80%;
+            }
+        }
+        .descr{
+            margin-top: 10px;
+            width: calc(100% - 20px);
+            padding: 0 10px;
+            p{
+                margin: 0;
+                @include bText(18);
+                text-align: center;
+                color: #4C7DB0;
+                &:not(:first-child){margin-top: 5px;}
+            }
+        }
+        .partners{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            div{
+                width: 23%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

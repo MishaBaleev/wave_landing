@@ -1,0 +1,81 @@
+@import "../mixin.scss";
+
+.products_mob{
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    .title_mob{
+        background-color: #6F85B0;
+        width: max-content;
+        padding: 2px 15px;
+        border-radius: 10px 10px 0 0;
+        p{
+            margin: 0;
+            @include bText(20)
+        }
+    }
+    .swiper_mob{
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 5px 5px #00000035;
+        border-radius: 0 10px 10px 10px;
+        height: 350px;
+        .swiper-button-next, .swiper-button-prev{display: none;}
+        .swiper_slide{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .left_sec{
+                width: calc(100% - 20px);
+                padding: 10px 10px 0 10px;
+                p{
+                    margin: 0;
+                    @include text(15);
+                    color: rgb(72, 72, 72);
+                }
+                a{
+
+                }
+            }
+            .right_sec{
+                width: 100%;
+                position: relative;
+                .gradient{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: -1px;
+                    right: 0;
+                    background: linear-gradient(to bottom, whitesmoke, rgba(255, 255, 255, 0));
+                }
+                img{
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .circles{
+        width: 100%;
+        @include flexContainerCenterWrap();
+        margin-top: 15px;
+        div{
+            aspect-ratio: 1/1;
+            width: 18px;
+            border-radius: 9px;
+            background-color: #4C7DB0;
+            @include flexContainerCenterWrap();
+            &:nth-child(2){
+                margin: 0 10px 0 10px
+            }
+            &.active::after{
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+                background-color: whitesmoke;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "../mixin.scss";
+
+.modal{
+    position: fixed;
+    z-index: 100;
+    top: 100px;
+    left: calc(50% - 400px);
+    width: 800px;
+    background-color: red;
+    border-radius: 10px;
+    .mod_title{
+        width: 100%;
+        padding: 5px 0;
+        background-color: rgb(158, 0, 0);
+        border-radius: 15px 15px 0 0;
+        p{
+            width: 100%;
+            @include bText(30, 10);
+            text-align: center;
+            margin: 0;
+        }
+    }
+    .mod_descr{
+        width: calc(100% - 40px);
+        margin-top: 10px;
+        padding: 0 20px 10px 20px;
+        p{
+            width: 100%;
+            @include text(25, 10);
+            text-align: center;
+            margin: 0;
+        }
+    }
+    &.good{
+        background-color: #03aa03;
+        .mod_title{
+            background-color: #005900;
+        }
+    }
+}

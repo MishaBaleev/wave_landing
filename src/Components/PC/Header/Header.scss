@@ -1,0 +1,54 @@
+@import "../mixin.scss";
+
+.header_pc{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    width: calc(100% - 40px);
+    min-width: 1000px;
+    padding: 0 20px;
+    height: 70px;
+    background-color: #4C7DB0;
+    @include flexContainerCenterWrap();
+    flex-wrap: nowrap;
+    .logo{
+        height: 90%;
+    }
+    .navigation{
+        width: 100%;
+        height: 100%;
+        @include flexContainerCenterWrap();
+        justify-content: space-around;
+        .nav_item{
+            padding: 0 20px;
+            height: 100%;
+            transition-duration: .4s;
+            @include flexContainerCenterWrap();
+            @media(hover){
+                &:hover{
+                    background-color: #ffffff55;
+                    cursor: pointer;
+                }
+            }
+            p{
+                margin: 0;
+                @include bText(30, 10);
+            }
+        }
+    }
+}
+@media(max-width: 1300px){
+    .header_pc{
+        .logo{
+            height: 90%;
+        }
+        .navigation{
+            .nav_item{
+                p{
+                    margin: 0;
+                    @include bText(25, 10);
+                }
+            }
+        }
+    }  
+}

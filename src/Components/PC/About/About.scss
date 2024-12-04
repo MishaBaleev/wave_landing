@@ -1,0 +1,96 @@
+@import "../mixin.scss";
+
+.about{
+    width: 95%!important;
+    scroll-margin: 100px;
+    .title{
+        padding: 5px 30px;
+        background-color: #6F85B0;
+        width: max-content;
+        border-radius: 20px 20px 0 0;
+        p{
+            padding: 0 20px;
+            margin: 0;
+            @include bText(30, 10);
+        }
+    }
+    .block{
+        width: 100%;
+        box-shadow: 10px 10px 10px 10px #00000035;
+        border-radius: 0 20px 20px 20px;
+        background-color: whitesmoke;
+        @include flexContainerCenterWrap();
+        .logo{
+            width: 100%;
+            @include flexContainerCenterWrap();
+            img{
+                @include adaptiv-height(100);
+            }
+        }
+        .descr{
+            @include flexContainerCenterWrap();
+            .left_sec{
+                width: calc(45% - 20px);
+                padding-left: 20px;
+                p{
+                    @include bText(25, 10);
+                    color: #4C7DB0;
+                    margin: 0;
+                    &:not(:first-child){margin-top: 15px;}
+                }
+            }
+            .right_sec{
+                width: 55%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                div{
+                    @include flexContainerCenterWrap();
+                    width: 45%;
+                    img{
+                        height: 70%;
+                    }
+                }
+            }
+        }
+        .footer{
+            width: 100%;
+            background-color: #6F85B0;
+            border-radius: 0 0 20px 20px;
+            padding: 10px 20px;
+            p{
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                @include text(15, 10);
+            }
+        }
+    }
+}
+@media(max-width: 1600px){
+    .about{
+        .block{
+            .descr{
+                .left_sec{
+                    p{
+                        @include bText(23, 10);
+                        color: #4C7DB0
+                    }
+                }
+                .right_sec{
+                    div{
+                        width: 45%;
+                        img{
+                            height: 60%;
+                        }
+                    }
+                }
+            }
+            .footer{
+                p{
+                    @include text(15, 10);
+                }
+            }
+        }
+    }
+}

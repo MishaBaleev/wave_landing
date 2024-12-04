@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import PC from "./Components/PC/PC";
+import Mob from "./Components/Mob/Mob";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+  const user_agent = navigator.userAgent.toLocaleLowerCase()
+  const is_pc = (user_agent.search("iphone") > -1)?false:((user_agent.search("android") > -1)?false:true)
+  return <div className="App">
+    {is_pc===true?
+        <PC/>:<Mob/>
+    }
+  </div>
 }
-
 export default App;
