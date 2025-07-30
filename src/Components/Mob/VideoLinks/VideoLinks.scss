@@ -1,0 +1,44 @@
+@import "../mixin.scss";
+
+.video_links_mob{
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    .title_mob{
+        background-color: #6F85B0;
+        width: max-content;
+        padding: 2px 15px;
+        border-radius: 10px 10px 0 0;
+        p{
+            margin: 0;
+            @include bText(20)
+        }
+    }
+    .block_mob{
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 5px 5px #00000035;
+        border-radius: 0 10px 10px 10px;
+        padding-bottom: 15px;
+        .video_object{
+            padding-top: 15px;
+            width: 95%;
+            height: 100%;
+            @include flexContainerCenterWrap();
+            .video_title{
+                padding: 0;
+                @include bText(18);
+                color: #4C7DB0;
+                margin-bottom: 10px;
+                p{
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            iframe{
+                width: 95%;
+                aspect-ratio: 16/9;
+                border-radius: 10px;
+            }
+        }
+    }
+}

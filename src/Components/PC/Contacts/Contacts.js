@@ -30,7 +30,7 @@ const Contacts = () => {
                     <ul className="list">
                         <li><p>Михайлова Василиса Дмитриевна</p></li>
                         <li><p>vmihaylova@sfedu.ru</p></li>
-                        <li><p>vmihaylova@sfedu.ru</p></li>
+                        <li><p>+7 (995) 379 66 25</p></li>
                     </ul>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import Services from "./Sevices/Services";
 import About from "./About/About";
 import Contacts from "./Contacts/Contacts";
 import Order from "./Order/Order";
+import VideoLinks from "./VideoLinks/VideoLinks";
 import { connect } from "react-redux";
 import { updateModal } from "../../AppSlice";
 import { useEffect } from "react";
@@ -30,6 +31,7 @@ const PC = (props) => {
         <Header gotoSection={gotoSection}/>
         <main className="pc_main">
             <Products/>
+            <VideoLinks/>
             <Services/>
             <Order/>
             <About/>

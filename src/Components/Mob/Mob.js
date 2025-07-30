@@ -6,6 +6,7 @@ import Header from "./Header/Header";
 import Products from "./Products/Products";
 import Services from "./Services/Services";
 import Order from "./Order/Order";
+import VideoLinks from "./VideoLinks/VideoLinks";
 import { connect } from "react-redux";
 import { updateModal } from "../../AppSlice";
 import Modal from "./Modal/Modal";
@@ -28,6 +29,7 @@ const Mob = (props) => {
         <Header gotoSection={gotoSection}/>
         <main className="mob_main">
             <Products/>
+            <VideoLinks/>
             <Services/>
             <Order/>
             <About/>

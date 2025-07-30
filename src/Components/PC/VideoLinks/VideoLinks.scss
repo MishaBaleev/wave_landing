@@ -1,0 +1,29 @@
+@import "../mixin.scss";
+
+.video_links{
+    .block{
+        @include flexContainerCenterWrap();
+        height: auto!important;
+        padding: 20px 10px 20px 10px!important;
+        .video_object{
+            width: 50%;
+            height: 100%;
+            @include flexContainerCenterWrap();
+            .video_title{
+                padding: 0;
+                @include bText(23, 10);
+                color: #4C7DB0;
+                margin-bottom: 10px;
+                p{
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            iframe{
+                width: 95%;
+                aspect-ratio: 16/9;
+                border-radius: 10px;
+            }
+        }
+    }
+}
